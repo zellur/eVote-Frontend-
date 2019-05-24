@@ -1,0 +1,130 @@
+img {
+    width: 100%;
+    height: 600px;
+}
+
+
+/* --------------------------
+:: 4.0 Contact  Area CSS
+-------------------------- */
+
+.contact-form {
+    background: #fff;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 80%;
+}
+
+.contact-form .form-control {
+    border-radius: 1rem;
+}
+
+.contact-form form {
+    padding: 14%;
+}
+
+.contact-form form .row {
+    margin-bottom: -7%;
+}
+
+.contact-form h3 {
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* --------------------------
+:: 4.0 Special Area CSS
+-------------------------- */
+
+.single-icon>i {
+    font-size: 36px;
+    color: #fb397d;
+}
+
+.single-special>h4 {
+    font-size: 22px;
+    color: #0062cc;
+}
+
+.single-icon {
+    margin-bottom: 25px;
+}
+
+.single-special>h4 {
+    font-size: 22px;
+    color: #0062cc;
+    margin-bottom: 15px;
+}
+
+.single-special {
+    border: 1px solid #eff2f6;
+    padding: 40px;
+    border-radius: 40px 40px 40px 0px;
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+    margin-bottom: 30px;
+}
+
+.special_description_content>h2 {
+    color: #0062cc;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.single-special:hover {
+    -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+}
+
+.single-special p {
+    margin-bottom: 0;
+}
+
+.line-shape {
+    margin-left: calc(50% - 40px);
+}
+
+.line-shape-white,
+.line-shape {
+    width: 80px;
+    height: 2px;
+    background-color: #fb397d;
+    margin-top: 15px;
+}
+
+.section-heading>h2 {
+    font-weight: 300;
+    color: #0062cc;
+    font-size: 48px;
+    margin: 0;
+}
+
+.container {
+    padding: 60px;
+    background: azure;
+}

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.open .dropdown-menu {
+    display: inline-block;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.open .dropdown-menu a:hover {
+    background: cadetblue !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    background: aliceblue;
+}
+.modal-header {
+  background: #206769;
+}
+.btn:focus {
+  box-shadow: none!important;
+}
+.modal-title {
+  color: white;
+}

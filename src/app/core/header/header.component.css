@@ -1,0 +1,16 @@
+.navbar {
+    height: 60px;
+    background-color: #294c54;
+}
+
+.navbar ul>li a {
+    color: azure;
+}
+
+.dropdown-menu {
+    background-color: #294c54;
+}
+
+a.dropdown-item:hover {
+    background: #294c54;
+}

@@ -1,0 +1,29 @@
+aside {
+    padding-top: 10px;
+    background: #206769;
+    min-height: 100%;
+    max-width: 250px;
+    overflow: hidden;
+}
+
+ul>li {
+    display: block;
+    color: aliceblue;
+    padding: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    color: #b6b904;
+    font-weight: bold;
+}
+
+.left-menu-item {
+  color: bisque !important;
+  font-weight: bold;
+}
+.left-menu-item:hover {
+  color: black !important;
+  background: cadetblue;
+}

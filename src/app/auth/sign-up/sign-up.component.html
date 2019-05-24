@@ -1,0 +1,101 @@
+<div class="container" style="padding: 20px; min-height:100vh;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <header class="card-header">
+                    <a [routerLink]="['/signin']" class="float-right btn btn-outline-primary mt-1">Sign in</a>
+                    <h4 class="card-title mt-2">Sign up</h4>
+                </header>
+                <article class="card-body">
+                    <form (ngSubmit)="onSubmit()" #form="ngForm">
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>First name </label>
+                                <input type="text" class="form-control" placeholder="First Name" name="firstName" [(ngModel)]="user.firstName" required>
+                            </div>
+                            <!-- form-group end.// -->
+                            <div class="col form-group">
+                                <label>Last name</label>
+                                <input type="text" class="form-control" placeholder="Last Name" name="lastName" [(ngModel)]="user.lastName" required>
+                            </div>
+                            <!-- form-group end.// -->
+                        </div>
+                        <!-- form-row end.// -->
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" placeholder="xxxx@gmail.com" name="email" [(ngModel)]="user.email" required>
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <!-- form-group end.// -->
+                        <div class="form-group">
+                            <label>Mobile</label>
+                            <input type="text" class="form-control" placeholder="+88 017XXXXXXXX" name="mobile" [(ngModel)]="user.mobile" required>
+                        </div>
+                        <!-- form-group end.// -->
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control" placeholder="address" name="address" [(ngModel)]="user.address">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="male" [(ngModel)]="user.gender" required>
+                                <span class="form-check-label"> Male </span>
+                              </label>
+                            <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="female" [(ngModel)]="user.gender">
+                                <span class="form-check-label"> Female</span>
+                              </label>
+                            <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" value="others" [(ngModel)]="user.gender">
+                                <span class="form-check-label"> others</span>
+                              </label>
+                        </div>
+                        <!-- form-group end.// -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>City</label>
+                                <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="user.city">
+                            </div>
+                            <!-- form-group end.// -->
+                            <div class="form-group col-md-6">
+                                <label>Country</label>
+                                <select id="inputState" class="form-control" name="country" [(ngModel)]="user.country">
+                                    <option> Choose...</option>
+                                    <option value="Uzbekistan">Uzbekistan</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="United States">United States</option>
+                                    <option value="India">India</option>
+                                    <option value="Afganistan">Afganistan</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                </select>
+                            </div>
+                            <!-- form-group end.// -->
+                        </div>
+                        <!-- form-row.// -->
+                        <div class="form-group">
+                            <label>Create password</label>
+                            <input class="form-control" type="password" placeholder="Choose password" name="password" [(ngModel)]="user.password" required>
+                        </div>
+                        <!-- form-row.// -->
+                        <div class="form-group">
+                            <label>Confirm password</label>
+                            <input class="form-control" type="password" placeholder="Confirm password" name="confirmPassword" [(ngModel)]="user.confirmPassword" required>
+                        </div>
+                        <!-- form-group end.// -->
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"> Sign up  </button>
+                        </div>
+                        <!-- form-group// -->
+                        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
+                    </form>
+                </article>
+                <!-- card-body end .// -->
+                <div class="border-top card-body text-center">Have an account? <a [routerLink]="['/signin']">Sign in</a></div>
+            </div>
+            <!-- card.// -->
+        </div>
+        <!-- col.//-->
+
+    </div>
+    <!-- row.//-->
+</div>
