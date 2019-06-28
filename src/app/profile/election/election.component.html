@@ -7,6 +7,8 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+
+<!--start modal part -->
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Election Modal</h4>
@@ -16,7 +18,7 @@
   </div>
   <div class="modal-body">
     <div class="row">
-      <form class="col-md-12">
+      <form class="col-md-12" #form= 'ngForm'>
         <div class="row">
             <div class="form-group">
               <label class="btn btn-default" for="electionImage">Upload Image</label>
@@ -27,7 +29,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="title">Election Title</label>
-              <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Title">
+              <input type="text" class="form-control" id="title" aria-describedby="emailHelp" name="name" placeholder="Enter Title" [(ngModel)]="election.name" required="required">
             </div>
           </div>
         </div>
@@ -35,7 +37,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="category">Category</label>
-              <select name="category" id="category" class="form-control">
+              <select name="category" id="category" class="form-control" name="category" [(ngModel)]="election.category"  required="required">
                 <option> Select Category </option>
                 <option value="public"> Public </option>
                 <option value="private"> Private </option>
@@ -48,7 +50,7 @@
             <div class="form-group">
               <label for="startDate">Start Date</label>
               <div class="input-group">
-                <input id="startDate" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                <input id="startDate" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker" name="startDate" [(ngModel)]="startDate" required="required">
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
                 </div>
@@ -59,7 +61,7 @@
             <div class="form-group">
               <label for="endDate">Start Date</label>
               <div class="input-group">
-                <input id="endDate" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp1="ngbDatepicker">
+                <input id="endDate" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp1="ngbDatepicker" name="endDate" [(ngModel)]="endDate" required="required">
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary calendar" (click)="dp1.toggle()" type="button"></button>
                 </div>
@@ -71,7 +73,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="description">Description</label>
-              <textarea rows="2" class="form-control" id="description" aria-describedby="description" placeholder="Description"></textarea>
+              <textarea rows="2" class="form-control" id="description" aria-describedby="description" placeholder="Description" name="description" [(ngModel)]="election.description" required="required"></textarea>
             </div>
           </div>
         </div>
@@ -80,7 +82,7 @@
 
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+    <button class="btn btn-success" (click)="onSave()">Save</button>
     <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
   </div>
 </ng-template>

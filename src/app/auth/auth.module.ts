@@ -4,7 +4,6 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { CoreModule } from '../core/core.module';
 import { AuthService } from './auth.service';
 
 @NgModule({

@@ -11,6 +11,7 @@ import { CoreModule } from '../core/core.module';
 import { TopicsComponent } from './topics/topics.component';
 import { VoteComponent } from './vote/vote.component';
 import {ProfileService} from './profile.service';
+import {ElectionService} from '../shared/apicall/election.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {ProfileService} from './profile.service';
   exports: [
     AppRoutingModule
   ],
-  providers: [ProfileService]
+  providers: [ProfileService, ElectionService]
 })
 export class UserModule {
 
