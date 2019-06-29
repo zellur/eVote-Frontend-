@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Election} from '../../shared/models/election.model';
 import {ElectionService} from '../../shared/apicall/election.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-election',
@@ -22,7 +23,7 @@ export class ElectionComponent implements OnInit {
     month: '',
     day: ''
   };
-  constructor(private modalService: NgbModal, private electionService: ElectionService) {
+  constructor(private modalService: NgbModal, private electionService: ElectionService, private tostr: ToastrService) {
   }
   ngOnInit() {
   }
@@ -65,5 +66,8 @@ export class ElectionComponent implements OnInit {
       return `with: ${reason}`;
     }
 
+  }
+  showTost() {
+    this.tostr.success('SHowing toast........');
   }
 }

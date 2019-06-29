@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './profile/user.module';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,12 @@ import { UserModule } from './profile/user.module';
     AuthModule,
     UserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 1000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true
+    }),
     AppRoutingModule
   ],
   providers: [],
